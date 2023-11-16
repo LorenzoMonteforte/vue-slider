@@ -1,0 +1,67 @@
+/* Generals */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/* Container */
+#container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container > div{
+    height: 75%;
+    width: 75%;
+    background-color: blue;
+    position: relative;
+}
+
+#container > div > button{
+    height: 10%;
+    aspect-ratio: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+}
+
+#container > div > button:first-of-type{
+    left: 0;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+#container > div > button:last-of-type{
+    right: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+#container > div > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#container > div > div{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 0.5rem;
+}
+
+#container > div > div > p{
+    margin-top: 0.5rem;
+}
