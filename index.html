@@ -12,7 +12,7 @@
     <div id="app">
         {{mostraFoto()}}
         <div id="container">
-            <div>
+            <div id="fotoContainer">
                 <button @click="[scorriIndietro, stopAutoPlay]">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
@@ -24,6 +24,9 @@
                     <h2>{{h2Immagine}}</h2>
                     <p>{{pImmagine}}</p>
                 </div>
+            </div>
+            <div id="miniFotoContainer">
+                <img v-for="(immagine, index) in slides" v-bind:src="immagine.immagine" :class="{scale : (index == i)}" alt="">
             </div>
         </div>
     </div>
