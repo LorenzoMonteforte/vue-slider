@@ -33,7 +33,6 @@ createApp({
             this.pImmagine = this.slides[this.i].descrizione;
         },
         scorriAvanti : function(){
-            clearInterval(this.autoPlay);
             if(this.i < (this.slides.length-1)){
                 this.i++;
             }else{
@@ -41,12 +40,14 @@ createApp({
             }
         },
         scorriIndietro : function(){
-            clearInterval(this.autoPlay);
             if(this.i == 0){
                 this.i = (this.slides.length - 1);
             }else{
                 this.i--;
             }
+        },
+        stopAutoPlay : function(){
+            clearInterval(this.autoPlay);
         }
     },
     mounted(){

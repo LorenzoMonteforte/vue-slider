@@ -13,10 +13,10 @@
         {{mostraFoto()}}
         <div id="container">
             <div>
-                <button @click="scorriIndietro">
+                <button @click="[scorriIndietro, stopAutoPlay]">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <button @click="scorriAvanti">
+                <button @click="[scorriAvanti, stopAutoPlay]">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
                 <img v-bind:src="srcImmagine" alt="">
