@@ -22,7 +22,8 @@ createApp({
             srcImmagine : "",
             h2Immagine : "",
             pImmagine : "",
-            i : 0         
+            i : 0,
+            autoPlay : ""     
         }
     },
     methods : {
@@ -32,6 +33,7 @@ createApp({
             this.pImmagine = this.slides[this.i].descrizione;
         },
         scorriAvanti : function(){
+            clearInterval(this.autoPlay);
             if(this.i < (this.slides.length-1)){
                 this.i++;
             }else{
@@ -39,11 +41,15 @@ createApp({
             }
         },
         scorriIndietro : function(){
+            clearInterval(this.autoPlay);
             if(this.i == 0){
                 this.i = (this.slides.length - 1);
             }else{
                 this.i--;
             }
         }
+    },
+    mounted(){
+        this.autoPlay = setInterval(this.scorriAvanti, 3000);
     }
 }).mount('#app')
