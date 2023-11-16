@@ -10,20 +10,19 @@
 </head>
 <body>
     <div id="app">
+        {{mostraFoto()}}
         <div id="container">
             <div>
-                <button>
+                <button @click="scorriIndietro">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <button>
+                <button @click="scorriAvanti">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
-                <img src="https://img.freepik.com/free-photo/sunset-time-tropical-beach-sea-with-coconut-palm-tree_74190-1075.jpg" alt="">
+                <img v-bind:src="srcImmagine" alt="">
                 <div>
-                    <h2>Tramonto sulla spiaggia</h2>
-                    <p>
-                        Un meraviglioso tramonto con colori caldi che si riflettono sull'acqua.
-                    </p>
+                    <h2>{{h2Immagine}}</h2>
+                    <p>{{pImmagine}}</p>
                 </div>
             </div>
         </div>
